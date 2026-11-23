@@ -11,7 +11,9 @@
     "display": {
         "separator": " -> ",
         "constants": [
-            "──────────────────────────────"
+            "──────────────────────────────",
+            "│                  ",
+            "                      │"
         ]
     },
     "modules": [
@@ -20,10 +22,14 @@
             "format": "┌{$1}{$1}┐",
             "outputColor": "90"
         },
-        {
-            "type": "title",
-            "keyWidth": 10
+		{
+            "type": "custom",
+            "format": "{$2}{#36}racoonbyte01{#37}@{#36}archerus{#90}{$3}"
         },
+        // {
+        //     "type": "title",
+        //     "keyWidth": 10
+        // },
         {
             "type": "custom",
             "format": "└{$1}{$1}┘",

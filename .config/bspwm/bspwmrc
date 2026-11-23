@@ -1,5 +1,8 @@
 #!/bin/sh
 
+xinput set-prop 'ELAN1203:00 04F3:307A Touchpad' 370 1
+xinput disable 'ELAN1203:00 04F3:307A Touchpad'
+
 pkill sxhkd
 sxhkd &
 
@@ -7,15 +10,11 @@ sxhkd &
 # picom &
 
 clipster -d -f $HOME/.config/clipster/ &
-/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
+# /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
 
+# wmname LG3D
 
-wmname LG3D
-
-xsetroot -cursor_name left_ptr
-feh --bg-fill ~/Pictures/backgrounds/racoon-tokio-night.png
-
-trackpad-toggle rest
+# trackpad-toggle rest
 
 # /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
 
@@ -23,14 +22,27 @@ trackpad-toggle rest
 SCREENS=$(xrandr | grep -w connected | wc -l)
 if [[ $SCREENS -eq 1 ]]; then
     # set te number of desktops
-    xrandr --output eDP-1 --mode 1920x1080 --pos 0x0 --rotate normal --output HDMI-1 --off --output DP-1 --off --output HDMI-2 --off --output DP-1-0 --off --output DP-1-1 --off --output DP-1-2 --off --output DP-1-3 --off
+    xrandr --output eDP-1 --mode 1920x1080 --pos 0x0 --rotate normal --rate 60
     bspc monitor eDP-1 -d 1 2 3 4 5 6 7
+	bspc desktop -f 1
 elif [[ $SCREENS -eq 2 ]]; then
-    xrandr --output eDP-1 --mode 1920x1080 --pos 0x0 --rotate normal --output HDMI-1 --primary --mode 1920x1080 --pos 1920x0 --rotate normal --output DP-1 --off --output HDMI-2 --off --output DP-1-0 --off --output DP-1-1 --off --output DP-1-2 --off --output DP-1-3 --off 
+	xrandr --output eDP-1 --mode 1920x1080 --pos 1920x0 --rotate normal --rate 60 --output HDMI-1 --primary --mode 1920x1080 --pos 0x0 --rotate normal --output DP-1 --off --output HDMI-2 --off --output DP-1-0 --off --output DP-1-1 --off --output DP-1-2 --off --output DP-1-3 --off
+    # xrandr --output eDP-1 --mode 1920x1080 --pos 0x0 --rotate normal --rate 60 --output HDMI-1 --primary --mode 1920x1080 --pos 1920x0 --rotate normal --output DP-1 --off --output HDMI-2 --off --output DP-1-0 --off --output DP-1-1 --off --output DP-1-2 --off --output DP-1-3 --off 
     bspc monitor HDMI-1 -d 1 2 3 4 5 6
     bspc monior eDP-1 -d 7
+	bspc desktop -f 1
+elif [[ $SCREENS -eq 3 ]]; then
+	xrandr --output eDP-1 --mode 1920x1080 --pos 3840x0 --rotate normal --output HDMI-1 --primary --mode 1920x1080 --pos 1920x0 --rotate normal --output DP-1 --off --output HDMI-2 --off --output DP-1-0 --mode 1920x1080 --pos 0x0 --rotate normal --output DP-1-1 --off --output DP-1-2 --off --output DP-1-3 --off
+	# xrandr --output eDP-1 --mode 1920x1080 --pos 2944x0 --rotate normal --rate 60 --output HDMI-1 --primary --mode 1920x1080 --pos 1024x0 --rotate normal --output DP-1 --off --output HDMI-2 --off --output DP-1-0 --mode 1920x1080 --pos 0x0 --rotate normal --output DP-1-1 --off --output DP-1-2 --off --output DP-1-3 --off
+    bspc monitor HDMI-1 -d 2 3 4 5 6
+    bspc monior eDP-1 -d 1
+    bspc monior DP-1-0 -d 7
+	bspc desktop -f 2
 fi
-nitrogen --restore
+
+xsetroot -cursor_name left_ptr
+
+feh --bg-fill ~/Pictures/backgrounds/background-everforest.png
 
 pkill polybar
 polybar &
@@ -49,14 +61,14 @@ bspc config remove_unplugged_monitors true
 
 # bspc config normal_border_color "#41a6b5"
 # bspc config focused_border_color "#4fd6be"
-bspc config urgent_border_color "#ff007c"
+bspc config urgent_border_color "#E67E80"
 # bspc config presel_border_color "#7aa2f7"
 # bspc config normal_sticky_border_color "#41a6b5"
 # bspc config focused_sticky_border_color "#41a6b5"
 
-bspc config active_border_color '#737aa2'
-bspc config normal_border_color '#394b70'
-bspc config focused_border_color '#3d59a1'
+bspc config active_border_color '#3A515D'
+bspc config normal_border_color '#4D4C43'
+bspc config focused_border_color '#425047'
 
 # bspc config split_ratio 0.5
 # bspc config borderless_monocle true
@@ -73,5 +85,5 @@ bspc config focused_border_color '#3d59a1'
 # bspc rule -a Kupfer.py focus=on
 # bspc rule -a Screenkey manage=off
 
-bspc rule -a feh state=floating center=on rectangle=480x360+0+0
+bspc rule -a feh state=tiled
 # bspc rule -a hidamari state=fullscreen

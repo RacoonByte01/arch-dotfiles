@@ -145,7 +145,7 @@ super + {Left,Down,Up,Right}
 
 # make screnshot imagemagick
 super + @p
-	import $(echo $HOME/Pictures/Captures/$(date +'Capture_%Y-%m-%d_%H:%M:%S.png'))
+	import "$(echo ~/Pictures/captures/$(date +'Capture_%Y-%m-%dT%H-%M-%S.png'))"
 
 # make screnshot imagemagick in clipboard
 super + shift + p
@@ -178,3 +178,7 @@ XF86Calculator
 # change keyboard layout
 super + shift + @c
 	change-layout -n
+XF86Tools
+	feishin
+# button2
+#     xclip -selection primary /dev/null

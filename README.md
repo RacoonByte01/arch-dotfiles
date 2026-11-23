@@ -2,51 +2,23 @@
 
 ## Home page
 
-![](https://github.com/javiLeL/arch-dotfiles/blob/main/Pictures/Captures/Capture_25-04-2024_18:26:02.png?raw=true)
-
-## Picom
-
-For use this you must install **picom-ftlabs-git** picom version _(For animations)_ *You can find it in **AUR***.
-
-> Add windows animation and blur effect.
-
-### Window Animations
-
-![](https://github.com/javiLeL/arch-dotfiles/blob/main/Videos/2024-04-25-18-30-17-_online-video-cutter.com_.gif?raw=true)
+![](https://github.com/user-attachments/assets/d42f5c5f-da64-4a43-a88e-c594f4238f21)
 
 ## Polybar
 
-> This is my actually Polibar configuration, in before that I had other but I lose the configuration file :(
+> This is my actually Polibar configuration
 
-> Anyway this is more beautiful :D
-
-![](https://github.com/javiLeL/arch-dotfiles/blob/main/Pictures/Captures/Capture_25-04-2024_18:26:28.png?raw=true)
+![](https://github.com/user-attachments/assets/79f59ba3-0245-4abd-a7e6-2694cb6b45f0)
 
 ## Dunst
 
 > Dunst is the notification daemon how I decided install because it is very lightweight
 
-| Low                                                                                                                | Normal                                                                                                             | Critical                                                                                                           |
-| ------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------ |
-| ![](https://github.com/javiLeL/arch-dotfiles/blob/main/Pictures/Captures/Capture_25-04-2024_19:03:22.png?raw=true) | ![](https://github.com/javiLeL/arch-dotfiles/blob/main/Pictures/Captures/Capture_25-04-2024_19:03:36.png?raw=true) | ![](https://github.com/javiLeL/arch-dotfiles/blob/main/Pictures/Captures/Capture_25-04-2024_19:03:03.png?raw=true) |
+| Low                                                                                  | Normal                                                                               | Critical                                                                             |
+| ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ |
+| ![](https://github.com/user-attachments/assets/33b5b11f-cce9-4ae1-96a8-3b29d75d9afa) | ![](https://github.com/user-attachments/assets/23c603f0-db2e-4a2b-adb5-e2a97bee02ad) | ![](https://github.com/user-attachments/assets/fce25dca-5693-464d-99d9-b2834207aede) |
 
 > **Note** generate notifications with information aditional. I made some scripts for used it pls read more in the [scrips folder](https://github.com/javiLeL/arch-dotfiles/tree/main/.scripts).
-
-## Rofi
-
-> For launch applications I use `Rofi` because despite being less lightweight than Dmenu, it has a simpler customization system than Dmenu because it is based on css.
-
-![](https://github.com/javiLeL/arch-dotfiles/blob/main/Pictures/Captures/Capture_25-04-2024_18:37:23.png?raw=true)
-
-## Text Editor
-
-> For edit code y use NVim and VScode
-
-> Nvim configuration in my github
-
-| nvim                                                                                                               | VScodium                                                                                                           |
-| ------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------ |
-| ![](https://github.com/javiLeL/arch-dotfiles/blob/main/Pictures/Captures/Capture_18-05-2024_17:12:51.png?raw=true) | ![](https://github.com/javiLeL/arch-dotfiles/blob/main/Pictures/Captures/Capture_18-05-2024_17:14:52.png?raw=true) |
 
 ## File Explorer
 
