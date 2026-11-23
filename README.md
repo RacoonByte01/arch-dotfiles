@@ -16,7 +16,7 @@
 
 | Low                                                                                  | Normal                                                                               | Critical                                                                             |
 | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ |
-| ![](https://github.com/user-attachments/assets/33b5b11f-cce9-4ae1-96a8-3b29d75d9afa) | ![](https://github.com/user-attachments/assets/23c603f0-db2e-4a2b-adb5-e2a97bee02ad) | ![](https://github.com/user-attachments/assets/fce25dca-5693-464d-99d9-b2834207aede) |
+| ![](https://github.com/user-attachments/assets/33b5b11f-cce9-4ae1-96a8-3b29d75d9afa) | ![](https://github.com/user-attachments/assets/39a2a4b0-c0dd-49c7-8e75-85c87758bdf2) | ![](https://github.com/user-attachments/assets/fce25dca-5693-464d-99d9-b2834207aede) |
 
 > **Note** generate notifications with information aditional. I made some scripts for used it pls read more in the [scrips folder](https://github.com/javiLeL/arch-dotfiles/tree/main/.scripts).
 
